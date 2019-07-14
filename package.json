@@ -1,0 +1,29 @@
+{
+  "name": "itvdn-landing",
+  "version": "1.0.0",
+  "description": "This is lading page from tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xanon50rus/landing-page.git"
+  },
+  "author": "Igor Kirnosov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xanon50rus/landing-page/issues"
+  },
+  "homepage": "https://github.com/Xanon50rus/landing-page#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp.spritesmith": "^6.10.1",
+    "rimraf": "^2.6.3"
+  }
+}

@@ -4,7 +4,10 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
+const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
+
 
 
 
@@ -35,7 +38,12 @@ gulp.task('templates:compile', function buildHTML() {
 /* ------------ Styles compile ------------- */
 gulp.task('styles:compile', function () {
   return gulp.src('source/styles/main.scss')
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer({
+            cascade: false
+        }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/css'))
 });
